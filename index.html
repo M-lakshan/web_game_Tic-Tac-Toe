@@ -1,0 +1,172 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fuzzy+Bubbles:wght@400;700&family=Overpass:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Tic-Tac-Toe Game</title>
+  </head>
+  <body>
+    <header>
+      <h3>Welcome, Let's play some&nbsp;</h3>
+      <h1>Ti<span>x</span>-Tac-T<span>o</span>e&nbsp;</h1>
+      <h3>... shall we?</h3>
+    </header>
+    <main>
+      <section id="control_panel">
+        <div id="contr_mode">mode:&nbsp;
+          <p><abbr title="Artificial Inteligence">AI</abbr></p>
+          <input type="checkbox" id="mode">
+          <label id="mode_lable" for="mode"><span></span></label>
+          <p><abbr title="Player vs Player">PvP</abbr></p>&nbsp;
+        </div>
+        <div id="contr_game_count">rounds:&nbsp;
+          <p class="i_match">1</p>
+          <input type="radio" id="i_match" class="game_count" name="game_count" value="1"/>
+          <label for="i_match">X</label>
+          <p class="ii_match">3</p>
+          <input type="radio" id="ii_match" class="game_count" name="game_count" value="3"/>
+          <label for="ii_match">X</label>
+          <p class="iii_match">5</p>
+          <input type="radio" id="iii_match" class="game_count" name="game_count" value="5"/>
+          <label for="iii_match">X</label>
+        </div>
+      </section>
+      <section id="contr_moves">
+        <p class="color_choose">preffered color:&nbsp;<span class="gold colors"></span><span class="purple colors"></span></p>
+        <div id="contr_symbol_n_strike">
+          <p><abbr title="Choose a symbole for yourself">symbole:&nbsp;</abbr></p>
+          <p class="symbols"><span class="symbol X">X</span><span class="symbol O">O</span></p>
+          <p class="striker"><abbr title="Choose who will strike first">1<sup>st</sup> move:</abbr></p>
+          <p class="strikes"><span class="strike myself">You</span><span class="strike opponent">Opponent</span></p>
+        </div>
+        <h2 id="round_result_i">Let's start&nbsp;<span>Ti<span class="span_alt">x</span>ing !</span></h2>
+        <h2 id="round_result_ii"><span>T<span class="span_alt">o</span>e&nbsp;</span>to go !</h2>
+      </section>
+      <section id="content_panel">
+        <div class="border">
+          <p class="current_player"><span class="players player_i ai_activated">A.I.</span><span class="players player_ii">You</span></p>
+          <div class="playground">
+            <div class="tiles tile_i"></div>
+            <div class="tiles tile_ii"></div>
+            <div class="tiles tile_iii"></div>
+            <div class="tiles tile_iv"></div>
+            <div class="tiles tile_v"></div>
+            <div class="tiles tile_vi"></div>
+            <div class="tiles tile_vii"></div>
+            <div class="tiles tile_viii"></div>
+            <div class="tiles tile_ix"></div>
+            <h2 class="end_results active game_over">Congratulations</h2>
+            <h3 class="end_results end_result_winner active game_over"><span></span>&nbsp;the winner</h3>
+            <p class="won_by end_results active game_over">won by</p>
+            <div class="overall_results end_results active game_over">
+              <p class="player_titles"><span>X</span>-<span>O</span></p>
+              <p class="player_scores"><span></span><span></span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="score_panel">
+        <p id="player_i" class="players"><span>AI</span>&nbsp;<span class="score">0</span></p>
+        <p id="result" class=""><span class="result_player"></span>&nbsp;<span class="result_sts"></span></p>
+        <p id="player_ii" class="players"><span>You</span>&nbsp;<span class="score">0</span></p>
+      </section>
+      <section id="popup_panel" class="closed">
+        <div id="popup">
+          <div class="instructions">
+            <h3>Instructions</h3>
+            <ul>
+              <li>Pick a color & a symbol for yourself</li>
+              <li>Select how many rounds you want to play</li>
+              <li>Pick who will go on the first-move</li>
+            </ul>
+            <p id="how_to_play">Don't know how to play?&nbsp;<span>read more...</span></p>
+          </div>
+          <div class="how_to_play deactive">
+            <h3>How to play Ti<span>x</span>-Tac-T<span>o</span>e</h3>
+            <ul>
+              <li>Each player has multiple attempts to strike until the boxes are filled</li>
+              <li>Each attempt count will swap between you and the opponent</li>
+              <li>By default, the game is played on only 1 round but can add up to 3 or 5 rounds
+                <ul>
+                  <li>1 Round (default) only consists of one match</li>
+                  <li>3 Rounds goes up to 3 matches</li>
+                  <li>5 Rounds goes up to 5 matches</li>
+                </ul>
+              </li>
+              <li>Wait until your opponent makes a move</li>
+              <li>Any chosen symbols should align in a single straight line with 3 of that symboles
+                <ul>
+                  <li>possible horizontal alignments</li>
+                  <div class="line horizontal_align">
+                    <div class="line_i">
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                    </div>
+                    <div class="line_ii">
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                    </div>
+                    <div class="line_iii">
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                    </div>
+                  </div>
+                  <li>possible vertical alignments</li>
+                  <div class="line vertical_align">
+                    <div class="line_i">
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                    </div>
+                    <div class="line_ii">
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                    </div>
+                    <div class="line_iii">
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                    </div>
+                  </div>
+                  <li>possible diagonal alignments</li>
+                  <div class="line diagonal_align">
+                    <div class="line_i">
+                      <p class="extras">&nbsp;&nbsp;&nbsp;<span class="bubble">•</span></p>
+                      <p class="extras">&nbsp;&nbsp;<span class="bubble">•</span>&nbsp;<span class="bubble">•</span>&nbsp;&nbsp;</p>
+                      <p class="line_alt"><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p class="extras">&nbsp;&nbsp;<span class="bubble">•</span>&nbsp;<span class="bubble">•</span>&nbsp;&nbsp;</p>
+                      <p class="extras">&nbsp;&nbsp;&nbsp;<span class="bubble">•</span></p>
+                    </div>
+                    <div class="line_ii">
+                      <p class="extras">&nbsp;&nbsp;&nbsp;<span class="bubble">•</span></p>
+                      <p class="extras">&nbsp;&nbsp;<span class="bubble">•</span>&nbsp;<span class="bubble">•</span>&nbsp;&nbsp;</p>
+                      <p class="line_alt"><span class="bubble">•</span>-<span class="bubble">•</span>-<span class="bubble">•</span></p>
+                      <p class="extras">&nbsp;&nbsp;<span class="bubble">•</span>&nbsp;<span class="bubble">•</span>&nbsp;&nbsp;</p>
+                      <p class="extras">&nbsp;&nbsp;&nbsp;<span class="bubble">•</span></p>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li>Note that any other alignments that are underachieving will be invalid</li>
+              <li>To win, you/your opponent have to complete the matches in the selected round</li>
+              <li>The player who won the highest count of matches in a round will become the final winner</li>
+            </ul>
+          </div>
+          <button id="close_popup">x</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p id="attribute">Designed & Developed by&nbsp;<a href="https://www.linkedin.com/in/e-m-lakshan-190212216/">M-Lakshan<span class="material-symbols-outlined">open_in_new</span></a></p>
+    </footer>
+  </body>
+  <script src="./script.js"></script>
+</html>
