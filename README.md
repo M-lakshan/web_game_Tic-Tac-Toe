@@ -13,7 +13,7 @@
 
 - Semantic HTML5 markup
 - Sass
-- JS
+- Vanilla JS
 - with Visual Studio Code Editor
 
 ## Author
