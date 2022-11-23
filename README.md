@@ -2,7 +2,7 @@
 
 # Sample Web Project - Tic-Tac-Toe Game
 
-![This is the design preview for Game](./preview_Tix-Tac-Toe.png)
+![This is the design preview for the Game](./preview_Tix-Tac-Toe.png)
 
 - Codepen URL: [Codepen Solution Page](https://codepen.io/m-lakshan/full/wvojjaE)
 - Live Site URL: [GitHub Pages](https://m-lakshan.github.io/web_game_Tic-Tac-Toe/)
