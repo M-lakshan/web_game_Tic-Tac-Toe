@@ -12,7 +12,7 @@
 ### Built with
 
 - Semantic HTML5 markup
-- Sass
+- SCSS
 - Vanilla JS
 - with Visual Studio Code Editor
 
